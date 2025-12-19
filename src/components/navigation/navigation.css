@@ -1,0 +1,145 @@
+/* Shared Navigation Styles */
+.brand-name {
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Sidebar Navigation */
+.sidebar-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #212529;
+  color: #fff;
+  padding: 0;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar-header {
+  background-color: #1a1d20;
+  padding: 1rem;
+  border-bottom: 1px solid #343a40;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.sidebar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav .nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left-color: #0d6efd;
+}
+
+.sidebar-nav .nav-link.active {
+  color: #fff;
+  background-color: rgba(13, 110, 253, 0.2);
+  border-left-color: #0d6efd;
+}
+
+/* Top Bar Dropdown */
+.topbar-dropdown {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-dropdown .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.topbar-dropdown .nav-link {
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.topbar-dropdown .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Hamburger Navigation */
+.hamburger-navigation {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-navigation .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hamburger-navigation .navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.hamburger-navigation .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.offcanvas .nav-link {
+  padding: 0.75rem 1rem;
+  color: #212529;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.offcanvas .nav-link:hover {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+}
+
+/* Responsive Navigation */
+.responsive-navigation {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-navigation .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.responsive-navigation .nav-link {
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.responsive-navigation .nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Layout adjustments for sidebar */
+.sidebar-layout {
+  display: flex;
+}
+
+.sidebar-layout .main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar-navigation {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar-layout .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
