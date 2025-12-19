@@ -1,0 +1,101 @@
+/* Shared Navigation Styles */
+
+/* Layout A: Sidebar Navigation Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #343a40;
+  transition: width 0.3s ease;
+  width: 250px;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background-color: #212529;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sidebar .toggle-btn {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 15px 20px;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar .nav-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.sidebar .nav-link i {
+  font-size: 1.2rem;
+  min-width: 20px;
+}
+
+.main-content {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}
+
+/* Active link highlighting for all navigation types */
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Ensure Bootstrap icons work (if using Bootstrap Icons CDN) */
+.bi {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  
+  .sidebar-header h3 {
+    display: none;
+  }
+  
+  .main-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+}
